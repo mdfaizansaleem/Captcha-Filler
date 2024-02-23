@@ -128,7 +128,7 @@
     function generateCaptcha() {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
       let captcha = '';
-      for (let i = 0; i < 7; i++) {
+      for (let i = 0; i < 5; i++) {
         captcha += characters.charAt(Math.floor(Math.random() * characters.length));
       }
       document.getElementById('captcha').textContent = captcha;
