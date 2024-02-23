@@ -69,16 +69,7 @@
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
 </script></div>
- <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
+
     <div class="ad-box"><script type="text/javascript">
 	atOptions = {
 		'key' : '94d0e1042edaa29d0df8041c8357757f',
@@ -119,16 +110,7 @@
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
 </script></div>
- <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
+ 
     <div class="ad-box"><script type="text/javascript">
 	atOptions = {
 		'key' : '94d0e1042edaa29d0df8041c8357757f',
@@ -144,9 +126,9 @@
     let points = parseInt(localStorage.getItem('points')) || 0;
 
     function generateCaptcha() {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
       let captcha = '';
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 7; i++) {
         captcha += characters.charAt(Math.floor(Math.random() * characters.length));
       }
       document.getElementById('captcha').textContent = captcha;
