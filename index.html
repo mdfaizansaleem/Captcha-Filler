@@ -260,14 +260,19 @@
             return sentences[randomIndex];
         }
 
-        function updatePoints() {
-            points++;
-            localStorage.setItem('points', points);
-            document.getElementById('point-counter').innerText = 'Points: ' + points;
-            currentText = generateRandomText();
-            document.getElementById('text-to-type').innerText = currentText;
-            document.getElementById('typing-area').value = '';
-        }
+       function updatePoints() {
+    points++;
+    localStorage.setItem('points', points);
+    document.getElementById('point-counter').innerText = 'Points: ' + points;
+    currentText = generateRandomText();
+    document.getElementById('text-to-type').innerText = currentText;
+    document.getElementById('typing-area').value = '';
+    // Add the following line for automatic page refresh
+    setTimeout(function() {
+        location.reload();
+    }, 2000); // Adjust the time interval as needed (in milliseconds)
+}
+
 
         document.getElementById('typing-area').addEventListener('input', function() {
             const typedText = this.value.trim();
