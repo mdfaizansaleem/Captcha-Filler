@@ -1,158 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mobile Website</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test & Practice Platform</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
 
-  .top-section, .middle-section, .bottom-section {
-    height: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #f0f0f0;
-    padding: 10px;
-  }
+        .top-section, .bottom-section {
+            height: 25%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightgray;
+        }
 
-  .ad-box {
-    width: 320px;
-    height: 50px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
+        .middle-section {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightblue;
+            position: relative;
+        }
 
-  .middle-section {
-    height: 40%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+        .ad-box {
+            width: 320px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-  #captchaInput {
-    margin: 10px;
-  }
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            margin-top: 10px;
+        }
 
-  #points {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-</style>
+        #point-counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="top-section">
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
-
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
-  </div>
-  <div class="middle-section">
-    <div id="captcha-container">
-      <p id="captcha"></p>
-      <input type="text" id="captchaInput" maxlength="5">
-      <button onclick="checkCaptcha()">Submit</button>
-      <span id="points">Points: 0</span>
+    <div class="top-section">
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
     </div>
-  </div>
-  <div class="bottom-section">
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
- 
-    <div class="ad-box"><script type="text/javascript">
-	atOptions = {
-		'key' : '94d0e1042edaa29d0df8041c8357757f',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
-</script></div>
-  </div>
-  <script>
-    let points = parseInt(localStorage.getItem('points')) || 0;
+    <div class="middle-section">
+        <div id="text-to-type">Start typing here...</div>
+        <textarea id="typing-area" placeholder="Start typing here..."></textarea>
+        <div id="point-counter">Points: 0</div>
+    </div>
+    <div class="bottom-section">
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+        <div class="ad-box"><script type="text/javascript">
+            atOptions = {
+                'key' : '94d0e1042edaa29d0df8041c8357757f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/94d0e1042edaa29d0df8041c8357757f/invoke.js"></scr' + 'ipt>');
+        </script></div>
+    </div>
+    <script>
+        let points = localStorage.getItem('points') || 0;
+        let currentText = '';
 
-    function generateCaptcha() {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-      let captcha = '';
-      for (let i = 0; i < 5; i++) {
-        captcha += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      document.getElementById('captcha').textContent = captcha;
-    }
+        const sentences = [
+            "The quick brown fox jumps over the lazy dog and the quick brown fox jumps over the lazy dog.",
+            "Programming is fun and programming is interesting.",
+            "Practice makes perfect and practice makes you better.",
+            "This is a typing test and this typing test will improve your typing speed.",
+            "Coding is my passion and coding is my hobby.",
+            "I love to learn new things and I love to explore new technologies.",
+            "Success comes to those who work hard and success comes to those who never give up.",
+            "Time flies when you're having fun and time flies when you're enjoying yourself.",
+            "Where there's a will, there's a way and where there's a way, there's a solution.",
+            "A journey of a thousand miles begins with a single step and a journey of a thousand miles begins with determination.",
+            "Actions speak louder than words and actions speak volumes.",
+            "All's well that ends well and everything ends well eventually.",
+            "Beauty is in the eye of the beholder and beauty is subjective.",
+            "Better late than never and it's better to do something late than to never do it at all.",
+            "Every cloud has a silver lining and there's something positive in every situation.",
+            "Fortune favors the bold and those who take risks are often rewarded.",
+            "Honesty is the best policy and it's important to always tell the truth.",
+            "In the end, we only regret the chances we didn't take and it's better to take risks than to regret not trying.",
+            "It's never too late to start and it's always a good time to begin.",
+            "Knowledge is power and education is key to success.",
+            "Laughter is the best medicine and it's important to find joy in life.",
+            "Life is what you make it and your actions determine your destiny.",
+            "No pain, no gain and hard work leads to success.",
+            "Opportunity knocks only once and it's important to seize the moment.",
+            "Patience is a virtue and good things come to those who wait.",
+            "Quality over quantity and it's better to have fewer things of high quality than many things of low quality.",
+            "The early bird catches the worm and those who act quickly are often rewarded.",
+            "Time is money and it's important to use time wisely.",
+            "Unity is strength and working together leads to success.",
+            "Variety is the spice of life and diversity makes life interesting.",
+            "Where there is love, there is life and love gives meaning to our existence.",
+            "You reap what you sow and your actions have consequences.",
+            "Change is the only constant and change is inevitable.",
+            "Do what you love, love what you do and find passion in your work.",
+            "Every dog has its day and everyone gets a chance to shine.",
+            "Failure is the stepping stone to success and we learn from our mistakes.",
+            "Good things come to those who wait and patience is a virtue.",
+            "Home is where the heart is and home is a place of love and comfort.",
+            "If at first you don't succeed, try, try again and perseverance leads to success.",
+            "Just do it and take action towards your goals.",
+            "Keep calm and carry on and stay composed in difficult situations.",
+            "Love conquers all and love is the most powerful force.",
+            "Make hay while the sun shines and take advantage of opportunities.",
+            "Never give up and keep pushing forward.",
+            "One man's trash is another man's treasure and value is subjective.",
+            "Practice what you preach and lead by example.",
+            "Quality, not quantity and focus on excellence.",
+            "Rome wasn't built in a day and great things take time to achieve.",
+            "Silence is golden and sometimes it's best to listen.",
+            "The best things in life are free and happiness comes from within.",
+            "There's no place like home and home is where you feel safe.",
+            "What goes around comes around and karma has a way of balancing things out.",
+            // Add more sentences here
+            "The quick brown fox jumps over the lazy dog and the quick brown fox jumps over the lazy dog.",
+            "Programming is fun and programming is interesting.",
+            "Practice makes perfect and practice makes you better.",
+            "This is a typing test and this typing test will improve your typing speed.",
+            "Coding is my passion and coding is my hobby.",
+            "I love to learn new things and I love to explore new technologies.",
+            "Success comes to those who work hard and success comes to those who never give up.",
+            "Time flies when you're having fun and time flies when you're enjoying yourself.",
+            "Where there's a will, there's a way and where there's a way, there's a solution.",
+            "A journey of a thousand miles begins with a single step and a journey of a thousand miles begins with determination.",
+            "Actions speak louder than words and actions speak volumes.",
+            "All's well that ends well and everything ends well eventually.",
+            "Beauty is in the eye of the beholder and beauty is subjective.",
+            "Better late than never and it's better to do something late than to never do it at all.",
+            "Every cloud has a silver lining and there's something positive in every situation.",
+            "Fortune favors the bold and those who take risks are often rewarded.",
+            "Honesty is the best policy and it's important to always tell the truth.",
+            "In the end, we only regret the chances we didn't take and it's better to take risks than to regret not trying.",
+            "It's never too late to start and it's always a good time to begin.",
+            "Knowledge is power and education is key to success.",
+            "Laughter is the best medicine and it's important to find joy in life.",
+            "Life is what you make it and your actions determine your destiny.",
+            "No pain, no gain and hard work leads to success.",
+            "Opportunity knocks only once and it's important to seize the moment.",
+            "Patience is a virtue and good things come to those who wait.",
+            "Quality over quantity and it's better to have fewer things of high quality than many things of low quality.",
+            "The early bird catches the worm and those who act quickly are often rewarded.",
+            "Time is money and it's important to use time wisely.",
+            "Unity is strength and working together leads to success.",
+            "Variety is the spice of life and diversity makes life interesting.",
+            "Where there is love, there is life and love gives meaning to our existence.",
+            "You reap what you sow and your actions have consequences.",
+            "Change is the only constant and change is inevitable.",
+            "Do what you love, love what you do and find passion in your work.",
+            "Every dog has its day and everyone gets a chance to shine.",
+            "Failure is the stepping stone to success and we learn from our mistakes.",
+            "Good things come to those who wait and patience is a virtue.",
+            "Home is where the heart is and home is a place of love and comfort.",
+            "If at first you don't succeed, try, try again and perseverance leads to success.",
+            "Just do it and take action towards your goals.",
+            "Keep calm and carry on and stay composed in difficult situations.",
+            "Love conquers all and love is the most powerful force.",
+            "Make hay while the sun shines and take advantage of opportunities.",
+            "Never give up and keep pushing forward.",
+            "One man's trash is another man's treasure and value is subjective.",
+            "Practice what you preach and lead by example.",
+            "Quality, not quantity and focus on excellence.",
+            "Rome wasn't built in a day and great things take time to achieve.",
+            "Silence is golden and sometimes it's best to listen.",
+            "The best things in life are free and happiness comes from within.",
+            "There's no place like home and home is where you feel safe.",
+            "What goes around comes around and karma has a way of balancing things out."
+        ];
 
-    function checkCaptcha() {
-      const captchaInput = document.getElementById('captchaInput').value;
-      const captchaText = document.getElementById('captcha').textContent;
-      if (captchaInput === captchaText) {
-        points++;
-        localStorage.setItem('points', points);
-        document.getElementById('points').textContent = `Points: ${points}`;
-        generateCaptcha();
-        document.getElementById('captchaInput').value = ''; // Clear input field
-        window.location.reload(); // Reload the page
-      } else {
-        alert('Incorrect Captcha!');
-      }
-    }
+        function generateRandomText() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            return sentences[randomIndex];
+        }
 
-    window.onload = function() {
-      document.getElementById('points').textContent = `Points: ${points}`;
-      generateCaptcha();
-    };
-  </script>
+        function updatePoints() {
+            points++;
+            localStorage.setItem('points', points);
+            document.getElementById('point-counter').innerText = 'Points: ' + points;
+            currentText = generateRandomText();
+            document.getElementById('text-to-type').innerText = currentText;
+            document.getElementById('typing-area').value = '';
+        }
+
+        document.getElementById('typing-area').addEventListener('input', function() {
+            const typedText = this.value.trim();
+            if (typedText === currentText) {
+                updatePoints();
+            }
+        });
+
+        currentText = generateRandomText();
+        document.getElementById('text-to-type').innerText = currentText;
+        document.getElementById('point-counter').innerText = 'Points: ' + points;
+    </script>
 </body>
 </html>
